@@ -1,0 +1,26 @@
+
+/* .dark-mode {
+  --bg-color: #333333;
+  --link-color: #333333;
+  --text-color: #ffffff;
+  --header-bg: #2980b9;
+  --button-bg: #27ae60;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  
+  display: grid;
+  grid-template-columns: 225px 225px;
+}
+
+#new-project{
+  display: grid;
+  grid-template-columns: auto;
+  border:1px solid black;
+  box-sizing: border-box;
+  padding: 2px;
+ 
+  
+
+}
