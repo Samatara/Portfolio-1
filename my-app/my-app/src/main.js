@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     const pro_list = document.getElementById('pro_list')
     const form = document.getElementById('project-form')
+
+
+
+    
     
     fetch('portofolio.Json')
         .then (Response=> Response.json())
@@ -20,7 +24,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
 
 
-    form.addEventListener('submit',(event)=>{
+    form.addEventListener('submit', async (event)=>{
         event.preventDefault();
         const projectName = document.getElementById('name').value;
         const projectDescription = document.getElementById('description').value;
@@ -29,6 +33,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
             name:projectName,
             description: projectDescription
         };
+
+        
 
         const list = document.createElement('ul');
         list.innerHTML= 
