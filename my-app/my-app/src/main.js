@@ -1,14 +1,20 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     const pro_list = document.getElementById('pro_list')
-    const form = document.getElementById('New-project')
+    const form = document.getElementById('project-form')
     
     fetch('portofolio.Json')
         .then (Response=> Response.json())
         .then (jsdata => {
             jsdata.projects.forEach(project => {
-               pro_list.innerHTML= `<h2>${project.name}</h2>
-                <p>${project.description}</p>`;
-                pro_list.appendChild(list)
+                const pro_div = document.createElement('div');
+                const p_title = document.createElement('h2');
+                p_title.textContent =project.name;
+                const p_description = document.createElement('p');
+                p_description.textContent= project.description;
+
+                pro_div.appendChild(p_title);
+                pro_div.appendChild(p_description);
+                pro_list.appendChild(pro_div)
                 
             });
         })
