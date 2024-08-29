@@ -12,27 +12,25 @@
     <header>portolio</header>
     <main>
 
-      <section id="project">
-        <H2>All projects</H2>
-        <ul id="project_list">
+      <div id="project">
+        <H1>All projects</H1>
+        <div id="pro_list">
           
-        </ul>
-      </section>
+        </div>
+      </div>
 
-      <div id="new-project">
+      <div id="New-project">
         <h2>create a new project</h2>
         <form id="project">
-          <section id="project-by-id">
+          <label for="name">project-name:</label>
+          <input type="text" id="name" required>
 
-          <label for="project-name">project-name:</label>
-          <input type="text" id="project-name" required>
-
-          <label for="project-description">Description:</label>
-          <textarea id="project-description" required></textarea>
-        </section>
+          <label for="description">Description:</label>
+          <textarea id="description" required></textarea>
           <button type="submit">Opprett prosjekt</button>
         </form>
       </div>
     </main>
+    <script src="portofolio.Json"></script>
   </body>
 </html>
